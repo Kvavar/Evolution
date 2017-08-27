@@ -7045,11 +7045,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Александр\\source\\repos\\Evolution\\Core.Processor\\Core.Processor.csproj",
+      "projectUniqueName": "C:\\Users\\Александр\\Documents\\GitHubRepositories\\Evolution\\Evolution\\Core.Processor\\Core.Processor.csproj",
       "projectName": "Core.Processor",
-      "projectPath": "C:\\Users\\Александр\\source\\repos\\Evolution\\Core.Processor\\Core.Processor.csproj",
+      "projectPath": "C:\\Users\\Александр\\Documents\\GitHubRepositories\\Evolution\\Evolution\\Core.Processor\\Core.Processor.csproj",
       "packagesPath": "C:\\Users\\Александр\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Александр\\source\\repos\\Evolution\\Core.Processor\\obj\\",
+      "outputPath": "C:\\Users\\Александр\\Documents\\GitHubRepositories\\Evolution\\Evolution\\Core.Processor\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Александр\\AppData\\Roaming\\NuGet\\NuGet.Config",
