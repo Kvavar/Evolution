@@ -1,0 +1,10 @@
+C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Core.Processor\bin\Debug\netcoreapp1.1\Core.Processor.deps.json
+C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Core.Processor\bin\Debug\netcoreapp1.1\Core.Processor.runtimeconfig.json
+C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Core.Processor\bin\Debug\netcoreapp1.1\Core.Processor.runtimeconfig.dev.json
+C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Core.Processor\bin\Debug\netcoreapp1.1\Core.Processor.dll
+C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Core.Processor\obj\Debug\netcoreapp1.1\Core.Processor.csprojResolveAssemblyReference.cache
+C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Core.Processor\obj\Debug\netcoreapp1.1\Core.Processor.csproj.CoreCompileInputs.cache
+C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Core.Processor\obj\Debug\netcoreapp1.1\Core.Processor.AssemblyInfo.cs
+C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Core.Processor\bin\Debug\netcoreapp1.1\Core.Processor.pdb
+C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Core.Processor\obj\Debug\netcoreapp1.1\Core.Processor.dll
+C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Core.Processor\obj\Debug\netcoreapp1.1\Core.Processor.pdb
