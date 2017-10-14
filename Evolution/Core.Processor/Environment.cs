@@ -2,13 +2,22 @@
 
 namespace Core.Processor
 {
-    internal class Environment
+    internal class Environment : IEnvironment
     {
         private Cell[,] _cells;
+
+        public Environment(Cell[,] cells) => _cells = cells;
 
         public void AddOrRelaceCell(Cell cell)
         {
             _cells[cell.Position.X, cell.Position.Y] = cell;
+        }
+
+        public bool IsCellAlive(TwoDimPoint cellPosition)
+        {
+            Cell cellUnderTest = _cells[cellPosition.X, cellPosition.Y];
+
+            return cellUnderTest != null ? cellUnderTest.IsAlive : false;
         }
 
         public bool IsCellAlive(TwoDimPoint startPosition , Directions direction)
@@ -19,33 +28,35 @@ namespace Core.Processor
             switch (direction)
             {
                 case Directions.N:
-                case Directions.NE:
-                case Directions.NW:
                     shiftY = --shiftY;
                     break;
-                case Directions.S:
-                case Directions.SE:
-                case Directions.SW:
-                    shiftY = ++shiftY;
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException($"nameof{ direction }");
-            }
-
-            switch(direction)
-            {
-                case Directions.E:
                 case Directions.NE:
-                case Directions.SE:
+                    shiftY = --shiftY;
                     shiftX = ++shiftX;
                     break;
-                case Directions.W:
-                case Directions.NW:
+                case Directions.E:
+                    shiftX = ++shiftX;
+                    break;
+                case Directions.SE:
+                    shiftY = ++shiftY;
+                    shiftX = ++shiftX;
+                    break;
+                case Directions.S:
+                    shiftY = ++shiftY;
+                    break;
                 case Directions.SW:
+                    shiftY = ++shiftY;
+                    shiftX = --shiftX;
+                    break;
+                case Directions.W:
+                    shiftX = --shiftX;
+                    break;
+                case Directions.NW:
+                    shiftY = --shiftY;
                     shiftX = --shiftX;
                     break;
                 default:
-                    throw new ArgumentOutOfRangeException($"nameof{ direction }");
+                    throw new ArgumentOutOfRangeException($"{nameof(direction)}");
             }
 
             int resultX = startPosition.X + shiftX;

@@ -1,20 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Core.Processor
 {
     internal class Cell
     {
-        private Environment _environment;
+        private IEnvironment _environment;
 
-        private Func<bool> _checkLiveCondotions;
+        private Func<TwoDimPoint, IEnvironment, bool> _checkLiveConditions;
 
-        public Cell(Environment environment, TwoDimPoint position, Func<bool> checkLiveConditions)
+        public Cell(IEnvironment environment, TwoDimPoint position, Func<TwoDimPoint, IEnvironment, bool> checkLiveConditions)
         {
             _environment = environment ?? throw new ArgumentNullException("Argument cannot be null", $"{nameof(environment)}");
 
-            _checkLiveCondotions = checkLiveConditions;
+            _checkLiveConditions = checkLiveConditions;
 
             Position = position;
         }
@@ -23,17 +21,11 @@ namespace Core.Processor
 
         public bool IsAlive => State == CellStates.Alive ? true : false;
 
-        public CellStates State => _checkLiveCondotions() ? CellStates.Alive : CellStates.Dead;
+        public CellStates State => _checkLiveConditions(Position, _environment) ? CellStates.Alive : CellStates.Dead;
 
         private void UpdateState()
         {
-            foreach(Directions direction in Enum.GetValues(typeof(Directions)))
-            {
-                if (_environment.IsCellAlive(Position, Directions.N))
-                {
-
-                }
-            }
+            
         }
     }
 }
