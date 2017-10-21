@@ -21,11 +21,11 @@ namespace Core.Processor
 
         public bool IsAlive => State == CellStates.Alive ? true : false;
 
-        public CellStates State => _checkLiveConditions(Position, _environment) ? CellStates.Alive : CellStates.Dead;
+        public CellStates State { get; set; }
 
-        private void UpdateState()
+        public void UpdateState()
         {
-            
+            State = _checkLiveConditions(Position, _environment) ? CellStates.Alive : CellStates.Dead;
         }
     }
 }
