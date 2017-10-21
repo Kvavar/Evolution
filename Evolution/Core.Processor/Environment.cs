@@ -8,7 +8,7 @@ namespace Core.Processor
 
         public Environment(Cell[,] cells) => _cells = cells;
 
-        public void AddOrRelaceCell(Cell cell)
+        public void AddOrReplaceCell(Cell cell)
         {
             _cells[cell.Position.X, cell.Position.Y] = cell;
         }
@@ -62,12 +62,22 @@ namespace Core.Processor
             int resultX = startPosition.X + shiftX;
             int resultY = startPosition.Y + shiftY;
 
-            if (resultX > 0 || resultY < 0 || resultX > _cells.GetUpperBound(0) || resultY > _cells.GetUpperBound(1))
+            if (resultX < 0 || resultY < 0 || resultX > _cells.GetUpperBound(0) || resultY > _cells.GetUpperBound(1))
                 return false; 
 
             Cell cellUnderTest = _cells[resultX, resultY];
 
             return cellUnderTest != null ? cellUnderTest.IsAlive : false;
+        }
+
+        public bool IsHeaven(TwoDimPoint position)
+        {
+            if(position.X > 0 && position.X < 10 && position.Y > 0 && position.Y < 10)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
