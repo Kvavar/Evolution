@@ -7,7 +7,7 @@ namespace Core.Processor
     class Program
     {
         private static int amountX = 50;
-        private static int amountY = 75;
+        private static int amountY = 50;
 
         static void Main(string[] args)
         {
@@ -59,8 +59,6 @@ namespace Core.Processor
 
                 Console.Clear();
             }
-
-            Console.ReadLine();
         }
     }
 }
