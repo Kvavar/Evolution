@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:Client.Ui.View"
         mc:Ignorable="d"
         Title="MainView" 
         Height="300" 
@@ -18,13 +19,8 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Canvas 
-            Grid.Row="0" 
-            Grid.Column="0" 
-            Width="250" 
-            Height="250"
-            Background="DarkSalmon">
+        <controls:LivingArea>
             
-        </Canvas>
+        </controls:LivingArea>
     </Grid>
 </Window>

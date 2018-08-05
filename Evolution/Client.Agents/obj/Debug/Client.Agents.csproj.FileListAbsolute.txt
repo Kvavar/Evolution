@@ -1,0 +1,6 @@
+C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Client.Agents\bin\Debug\Client.Agents.dll
+C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Client.Agents\bin\Debug\Client.Agents.pdb
+C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Client.Agents\obj\Debug\Client.Agents.csprojResolveAssemblyReference.cache
+C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Client.Agents\obj\Debug\Client.Agents.csproj.CoreCompileInputs.cache
+C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Client.Agents\obj\Debug\Client.Agents.dll
+C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Client.Agents\obj\Debug\Client.Agents.pdb

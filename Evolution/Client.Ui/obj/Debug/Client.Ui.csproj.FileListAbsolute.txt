@@ -13,3 +13,6 @@ C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Cli
 C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Client.Ui\obj\Debug\Client.Ui.exe
 C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Client.Ui\obj\Debug\Client.Ui.pdb
 C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Client.Ui\obj\Debug\Client.Ui.csprojResolveAssemblyReference.cache
+C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Client.Ui\obj\Debug\View\LivingArea.baml
+C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Client.Ui\obj\Debug\View\LivingArea.g.cs
+C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Client.Ui\obj\Debug\GeneratedInternalTypeHelper.g.cs
