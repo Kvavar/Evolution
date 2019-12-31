@@ -1,8 +1,0 @@
-C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Tests.Core.Processor\bin\Release\Tests.Core.Processor.dll
-C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Tests.Core.Processor\bin\Release\Tests.Core.Processor.pdb
-C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Tests.Core.Processor\bin\Release\nunit.framework.dll
-C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Tests.Core.Processor\bin\Release\nunit.framework.xml
-C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Tests.Core.Processor\obj\Release\Tests.Core.Processor.csprojResolveAssemblyReference.cache
-C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Tests.Core.Processor\obj\Release\Tests.Core.Processor.csproj.CoreCompileInputs.cache
-C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Tests.Core.Processor\obj\Release\Tests.Core.Processor.dll
-C:\Users\Александр\Documents\GitHubRepositories\Evolution\Evolution\Tests.Core.Processor\obj\Release\Tests.Core.Processor.pdb
