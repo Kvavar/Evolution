@@ -9,60 +9,18 @@ namespace Evolution
     class Program
     {
         private static double BaseValue = 10.0;
-        private static int NumberOfCreatures = 100;
-        private static int NumberOfProperties = 40;
         private static int MinimumPropertiesExceedToTakeOver = 5;
         private static Random Rand = new Random();
-        private static int AvarageBasis = 100;
-        private static int NormBasis = 60;
-
+        
         private static List<Creature> Creatures = new List<Creature>();
         private static List<Guid> Properties = new List<Guid>();
 
         static void Main(string[] args)
         {
-            var aliveToPlot = new List<PlotPoint>(NumberOfProperties);
-            for (int n = 1; n <= NumberOfProperties; n++)
-            {
-                var cumulativeAlive = 0;
-                for (int i = 0; i < AvarageBasis; i++)
-                {
-                    Create();
-                    cumulativeAlive += Eliminate(n);
-                }
-
-                var average = cumulativeAlive / (double)AvarageBasis;
-                /*var percentage = (average / ((double)NumberOfCreatures)) * 100.0;
-                Console.WriteLine($"For {n} criterias average alive percentage: {percentage}");*/
-                aliveToPlot.Add(new PlotPoint { X = n, Y = average / ((double)NumberOfCreatures) });
-            }
-
-            var maxY = aliveToPlot.Max(p => p.Y);
-            aliveToPlot = aliveToPlot.Select(p => new PlotPoint {X = p.X, Y = (p.Y / maxY) * NormBasis }).ToList();
-
-            for (int i = 0; i < NormBasis; i++)
-            {
-                var sb = new StringBuilder();
-                foreach (var point in aliveToPlot)
-                {
-                    sb.Append(point.Y >= maxY * NormBasis - i ? "*****" : "     ");
-                }
-
-                Console.WriteLine(sb.ToString());
-            }
-
-            Console.ReadLine();
+            
         }
 
-        private static void Create()
-        {
-            Properties = new List<Guid>(new int[NumberOfProperties].Select(_ => Guid.NewGuid()));
-            Creatures = new List<Creature>(new int[NumberOfCreatures].Select(_ => new Creature
-            (
-                Properties.ToDictionary(name => name, _ => BaseValue + Rand.NextDouble()),
-                Properties.ToDictionary(name => name, _ => BaseValue + Rand.NextDouble())
-            )));
-        }
+        
 
         private static void Start()
         {
