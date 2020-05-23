@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using System.Text;
+using Evolution.Model;
 
 namespace Evolution
 {
@@ -52,8 +53,6 @@ namespace Evolution
 
             Console.ReadLine();
         }
-
-
 
         private static void Create()
         {
@@ -164,23 +163,6 @@ namespace Evolution
 
             return alive;
         }
-    }
-
-    public class Creature
-    {
-        public Creature(Dictionary<Guid, double> properties, Dictionary<Guid, double> preferences)
-        {
-            Properties = properties;
-            Preferences = preferences;
-        }
-
-        public Dictionary<Guid, double> Properties { get; }
-        public Dictionary<Guid, double> Preferences { get; }
-
-        public bool Available => Couple == null;
-        public bool Alive { get; set; } = true;
-
-        public Creature Couple { get; set; }
     }
 
     public class Property
