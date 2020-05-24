@@ -7,9 +7,9 @@ namespace Evolution.Factor
 {
     public class NaturalSelection : ISelection
     {
-        private readonly IReadOnlyList<Selector> _selectors;
+        private readonly IReadOnlyList<ISelector> _selectors;
 
-        public NaturalSelection(IReadOnlyList<Selector> selectors)
+        public NaturalSelection(IReadOnlyList<ISelector> selectors)
         {
             _selectors = selectors;
         }
@@ -27,24 +27,18 @@ namespace Evolution.Factor
                 var passed = true;
                 foreach (var selector in _selectors)
                 {
-                    if(creature.Properties.TryGetValue(selector.PropertyName, out var value))
-                    {
-                        switch(selector.Type)
-                        {
-                            case SelectorType.In:
-                                passed = selector.LowerValue <= value && value <= selector.UpperValue;
-                                break;
-                            case SelectorType.Out:
-                                passed = value <= selector.LowerValue && selector.UpperValue <= value;
-                                break;
-                            default:
-                                throw new IndexOutOfRangeException($"Selector type is invalid.");
-                        }
-                    }
+                    passed = selector.Examine(creature);
 
                     if(!passed)
                     {
-                        break;
+                        if(selector.Type == SelectorType.Critical)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            //todo what if criteria is not critical
+                        }
                     }
                 }
 
